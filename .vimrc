@@ -80,6 +80,7 @@ let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
 let g:no_html_toolbar = 'yes'
+let g:neocomplcache_enable_at_startup = 1
 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_WinWidth = 50
@@ -157,5 +158,4 @@ function! DivHtml(line1, line2)
   set nonu
 endfunction
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
-colorscheme wombat256
-set guioptions=aAce
+colorscheme candycode
