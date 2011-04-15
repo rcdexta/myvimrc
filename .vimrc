@@ -51,6 +51,10 @@ map <C-l> <C-w>l
 " clear highlighting
 nmap <silent> ,/ :nohlsearch<CR>
 
+" copy current filename to clipboard
+nmap ,cs :let @*=expand("%")<CR>
+nmap ,cl :let @*=expand("%:p")<CR>
+
 " save file with sudo priviledge
 cmap w!! w !sudo tee % >/dev/null
 
@@ -81,6 +85,7 @@ let g:fuzzy_matching_limit = 10
 
 let g:no_html_toolbar = 'yes'
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_disable_auto_complete = 1
 
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_WinWidth = 50
@@ -157,5 +162,11 @@ function! DivHtml(line1, line2)
 
   set nonu
 endfunction
+
+" auto-indent
+let g:indent_guides_guide_size = 1
+
+
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
-colorscheme candycode
+colorscheme tir_black
+
