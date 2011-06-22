@@ -87,7 +87,7 @@ let g:no_html_toolbar = 'yes'
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_disable_auto_complete = 1
 
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let Tlist_WinWidth = 50
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -166,7 +166,10 @@ endfunction
 " auto-indent
 let g:indent_guides_guide_size = 1
 
+" zen-coding short-cuts
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:use_zen_complete_tag = 1
 
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
-colorscheme tir_black
+colorscheme vividchalk
 
